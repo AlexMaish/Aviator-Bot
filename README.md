@@ -1,2 +1,3 @@
-Using web scraping tools to aoutomate
-and implement Fibonacci series to see if it can work on aviator gaming.
+Using web scraping tools and kotlin to aoutomate betting. The project aims at identifying patterns and decide when to bet using strategies such as Fibonacci series.
+
+Disclaimer: This is built for educational purposes only.
