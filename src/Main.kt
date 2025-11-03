@@ -2,8 +2,8 @@ import bet.Aviator
 
 fun main() {
     val aviator = Aviator(
-        phoneNumber = "0795301955",
-        password = "50286186!",
+        phoneNumber = "0726155281",
+        password = "Cabbages23",
         targetMultiplier = 3.0
     )
     aviator.connect()

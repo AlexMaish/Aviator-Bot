@@ -13,13 +13,13 @@ data class BetActive(
 class BetManager {
     var betActive = BetActive(
         active = false,
-        amount = 5,
+        amount = 10,
         target = 3.0,
         playing = false,
         balance = 0.0
     )
     private val idealPlayers: MutableList<Int> = mutableListOf()
-    private val idealPlayersRoundsTarget = 3
+    private val idealPlayersRoundsTarget = 5
     private val idealPlayersTarget = 5000
     private val betStrategy = BetStrategy(betActive)
 
@@ -50,12 +50,22 @@ class BetManager {
         println("[PLAYERS]: in current round: $players")
     }
 
+//    fun incrementStakeIndex() {
+//        betStrategy.stakeIndex++
+//    }
+
     fun incrementStakeIndex() {
         betStrategy.stakeIndex++
+        betActive = betStrategy.getAmount(betActive)
     }
+
+//    fun resetStakeIndex() {
+//        betStrategy.stakeIndex = 0
+//    }
 
     fun resetStakeIndex() {
         betStrategy.stakeIndex = 0
+        betActive = betStrategy.getAmount(betActive)
     }
 
     fun placeBet(players: Int) {
